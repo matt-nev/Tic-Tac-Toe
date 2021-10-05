@@ -10,6 +10,7 @@ namespace Tic_Tac_Toe
             int winStatus = 0;
             int currentPlayer = -1;
             char[] boardSquare = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
             do
             {
                 Console.Clear();
@@ -170,14 +171,18 @@ namespace Tic_Tac_Toe
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Welcome to Tic Tac Toe!\n");
             Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("The goal of the game is to line up 3 of the same symbol in a row.\n");
+            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Player 1 is X\nPLayer 2 is O\n");
             Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine($"Player {PlayerNumber}'s turn, please enter 1 through 9 to select your square.\n");
             Console.ResetColor();
-        }
 
+        }
+        
         static void GameBoard(char[] boardSquare)
         {
             Console.WriteLine($" {boardSquare[0]} | {boardSquare[1]} | {boardSquare[2]} ");
